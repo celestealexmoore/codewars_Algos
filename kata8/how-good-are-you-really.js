@@ -1,5 +1,4 @@
 /* 
-
 DESCRIPTION:
 There was a test in your class and you passed it. Congratulations!
 But you're an ambitious person. You want to know if you're better than the average student in your class.
@@ -13,17 +12,12 @@ Your points are not included in the array of your class's points. For calculatin
 */
 
 function betterThanAverage(classPoints, yourPoints) {
-  let classSum = yourPoints;
+  let totalPoints = 0;
   for (let i = 0; i < classPoints.length; i++) {
-    classSum += classPoints[i];
+    totalPoints += classPoints[i];
   }
-  classPoints.length += 1;
-  let averageGrades = classSum / classPoints.length;
-  if (averageGrades < yourPoints) {
-    return true;
-  } else {
-    return false;
-  }
+  let average = (totalPoints + yourPoints) / (classPoints.length + 1);
+  return yourPoints > average ? true : false;
 }
 
 /* 
