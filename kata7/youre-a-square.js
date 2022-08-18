@@ -23,8 +23,8 @@ Examples
 
 var isSquare = function (n) {
   return Math.sqrt(n) % 1 === 0 ? true : false;
-  //   return n === Math.sqrt(n) * Math.sqrt(n) ? true : false;
-};
+// is the square root of that number a whole number?;
+}
 
 isSquare(70);
 
